@@ -22,13 +22,13 @@ const engine: IPhysicsEngine = createEngine({
 
 const controller: IController<IParticle> = createController<IParticle>({
   [ControllerKeys.UP]: (particle: IParticle) => {
-    particle.velocity.y = -0.5 + Math.abs(particle.velocity.y) * -1.9
+    particle.velocity.y = (0.5 + Math.abs(particle.velocity.y)) * -1.9
   },
   [ControllerKeys.LEFT]: (particle: IParticle) => {
-    particle.velocity.x = -0.5 + Math.abs(particle.velocity.x) * -1.9
+    particle.velocity.x = (0.5 + Math.abs(particle.velocity.x)) * -1.9
   },
   [ControllerKeys.RIGHT]: (particle: IParticle) => {
-    particle.velocity.x = -0.5 + Math.abs(particle.velocity.x) * 1.9
+    particle.velocity.x = (0.5 + Math.abs(particle.velocity.x)) * 1.9
   },
 })
 

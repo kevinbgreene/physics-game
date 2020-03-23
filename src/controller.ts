@@ -9,17 +9,17 @@ export enum ControllerKeys {
   RIGHT = 'ArrowRight',
 }
 
-export type InputCallback<T = void> = (args: T) => void
+export type InputCallback<T> = (args: T) => void
 
-export interface IController<T = void> {
+export interface IController<T> {
   update: InputCallback<T>
 }
 
-export type IControllerOptions<T = void> = Partial<
+export type IControllerOptions<T> = Partial<
   Record<ControllerKeys, InputCallback<T>>
 >
 
-export function createController<T = void>(
+export function createController<T>(
   options: IControllerOptions<T>,
 ): IController<T> {
   const keys: IKeyMap = {}
