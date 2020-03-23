@@ -3,6 +3,11 @@ export interface IPoint {
   y: number
 }
 
+export interface IRect {
+  width: number
+  height: number
+}
+
 export interface IParticle {
   pos: IPoint
   radius: number
@@ -11,4 +16,7 @@ export interface IParticle {
 
 export interface IWorld {
   gravity: number
+  drag: number
+  bounce: number
+  terminalVelocity: number
 }

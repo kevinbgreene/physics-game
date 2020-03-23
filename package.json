@@ -10,6 +10,7 @@
     "format": "prettier --write 'src/**/*.ts'",
     "prebuild": "npm run lint && npm run format",
     "build": "tsc",
+    "build:watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kevin Greene <hightimesteddy@gmail.com>",
